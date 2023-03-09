@@ -17,8 +17,8 @@ func main() {
 	fmt.Println("Starting audit for repo", color.YellowString(repo.Owner()+"/"+repo.Name()))
 
 	valid := true
-	valid = valid && checks.CheckTeamTopic(repo)
-	valid = valid && checks.CheckRepoVisibility(repo)
+	valid = checks.CheckTeamTopic(repo) && valid
+	valid = checks.CheckRepoVisibility(repo) && valid
 
 	if valid {
 		fmt.Println(color.GreenString("All checks have passed, congratulations ! ✅"))
