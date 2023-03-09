@@ -8,10 +8,10 @@ builds:
       - darwin
     ldflags:
       - -s -w
-      - -X github.com/dlvhdr/gh-dash/cmd.Version={{.Version}}
-      - -X github.com/dlvhdr/gh-dash/cmd.Commit={{.Commit}}
-      - -X github.com/dlvhdr/gh-dash/cmd.Date={{.CommitDate}}
-      - -X github.com/dlvhdr/gh-dash/cmd.BuiltBy=goreleaser
+      - -X github.com/gplassard/gh-github-repository-audit/cmd.Version={{.Version}}
+      - -X github.com/gplassard/gh-github-repository-audit/cmd.Commit={{.Commit}}
+      - -X github.com/gplassard/gh-github-repository-audit/cmd.Date={{.CommitDate}}
+      - -X github.com/gplassard/gh-github-repository-audit/cmd.BuiltBy=goreleaser
 
 archives:
   - format: binary
