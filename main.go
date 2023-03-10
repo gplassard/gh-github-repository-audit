@@ -19,6 +19,8 @@ func main() {
 	valid := true
 	valid = checks.CheckTeamTopic(repo) && valid
 	valid = checks.CheckRepoVisibility(repo) && valid
+	valid = checks.CheckBranchesPresence(repo) && valid
+	valid = checks.CheckBranchesProtection(repo) && valid
 
 	if valid {
 		fmt.Println(color.GreenString("All checks have passed, congratulations ! ✅"))
