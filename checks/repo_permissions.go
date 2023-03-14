@@ -36,7 +36,7 @@ func checkRepoTeam(teams []struct {
 				fmt.Println(color.GreenString("Team " + team.Name + " has valid permission (" + team.Permission + ") ✅"))
 				return true
 			} else {
-				fmt.Println(color.RedString("Team " + team.Name + " has valid permission (" + team.Permission + ") ❌"))
+				fmt.Println(color.RedString("Team " + team.Name + " has invalid permission (" + team.Permission + ") ❌"))
 				return false
 			}
 		}
