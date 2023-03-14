@@ -21,6 +21,7 @@ func main() {
 	valid = checks.CheckRepoVisibility(repo) && valid
 	valid = checks.CheckBranchesPresence(repo) && valid
 	valid = checks.CheckBranchesProtection(repo) && valid
+	valid = checks.CheckRepoPermissions(repo) && valid
 
 	if valid {
 		fmt.Println(color.GreenString("All checks have passed, congratulations ! ✅"))
